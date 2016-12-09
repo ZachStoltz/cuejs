@@ -19,10 +19,13 @@ cache:
 node_js:
   - "7.2.1"
 before_script:
+  - npm prune
   - "yarn install --ignore-scripts"
 script:
-  - "npm run lint"
+  - npm run lint
+  - npm run test-coverage
 #notifications:
 #  slack: t1me-team:DfTOcwEAXWO1YIFUN6wCSl7f
 after_success:
+  - npm run report-coverage
   - bash <(curl -s https://codecov.io/bash)

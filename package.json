@@ -9,7 +9,10 @@
   },
   "license": "MIT",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test-coverage": "jest --coverage",
+    "report-coverage": "cat ./coverage/lcov.info | codecov",
+    "lint": "eslint"
   },
   "jest": {
     "coverageDirectory": "./coverage/",
