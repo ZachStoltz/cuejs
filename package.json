@@ -12,18 +12,19 @@
     "test": "jest",
     "test-coverage": "jest --coverage",
     "report-coverage": "cat ./coverage/lcov.info | codecov",
-    "lint": "eslint"
+    "lint": "eslint ./**/*.js"
   },
   "jest": {
     "coverageDirectory": "./coverage/",
     "collectCoverage": true
   },
   "devDependencies": {
+    "babel-eslint": "^7.1.1",
     "codecov": "^1.0.1",
     "eslint": "^3.11.1",
     "eslint-config-airbnb": "^13.0.0",
     "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^3.0.1",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.8.0",
     "jest": "^17.0.3"
   }

@@ -1,4 +1,6 @@
-const Cuejs = require('cuejs');
+/* eslint-disable no-undef */
+const Cuejs = require('../');
+
 describe('CueJS Test Suite', () => {
   test('A new instantiated Cue has a storage array and size property', () => {
     const queue = new Cuejs();
@@ -46,7 +48,7 @@ describe('CueJS Test Suite', () => {
 
     const size = queue.size;
 
-    for (let i = 1; i < size; i++ ) {
+    for (let i = 1; i < size; i++) {
       expect(queue.deq()).toEqual(i);
     }
   });
