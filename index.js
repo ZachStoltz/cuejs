@@ -1,4 +1,4 @@
-const Queue = require('./queue');
+const Queue = require('./queue-up');
 const queue = new Queue();
 const fs = require('fs');
 
