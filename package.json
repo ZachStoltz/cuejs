@@ -4,6 +4,9 @@
   "description": "A utility library that ingests data files from a specified directory",
   "main": "index.js",
   "author": "Zachary Stoltz",
+  "repository": {
+    "url": "https://github.com/ZachStoltz/cuejs"
+  },
   "license": "MIT",
   "scripts": {
     "test": "jest"
