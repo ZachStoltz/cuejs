@@ -1,7 +1,7 @@
 const cuejs = function cuejs() {
   this.storage = [];
 
-  this.size = 0;
+  this.quantity = 0;
 };
 
 cuejs.prototype.enq = function enq(item) {
@@ -9,23 +9,23 @@ cuejs.prototype.enq = function enq(item) {
     item,
     ...this.storage,
   ];
-  this.size = this.size + 1;
+  this.quantity = this.quantity + 1;
 };
 
 cuejs.prototype.deq = function deq() {
-  if (this.size === 0) return undefined;
+  if (this.quantity === 0) return undefined;
   let rtnValue
   ;
-  if (this.size === 1) {
+  if (this.quantity === 1) {
     rtnValue = this.storage[0];
 
     this.storage = [];
-    this.size = 0;
+    this.quantity = 0;
 
     return rtnValue;
   }
 
-  this.size = this.size - 1;
+  this.quantity = this.quantity - 1;
   return this.storage.pop();
 };
 
@@ -34,7 +34,7 @@ cuejs.prototype.peek = function peek() {
 };
 
 cuejs.prototype.size = function size() {
-  return this.size;
+  return this.quantity;
 };
 
 module.exports = cuejs;
