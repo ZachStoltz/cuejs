@@ -1,12 +1,12 @@
-# Queuer
+# Cuejs
 ## A Base representation of a Queue in Javascript.
+### Node version was tested using v7.1.0 so be aware that older versions may not work yet.
 
 
 ### TODOs
   1. Error Handling
   2. Stress test
   3. Investigate Node.js version restrictions
-  4. Properly format file structure for publishing to npm
 
 ### How to run it you ask?
 ```Javascript

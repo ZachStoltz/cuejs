@@ -1,21 +1,38 @@
-const Queue = require('./queue-up');
-const queue = new Queue();
-const fs = require('fs');
+const cuejs = function() {
+  this.storage = [];
 
-const interval = setInterval(() => {
-  fs.readdir('./process', (err, data) => {
-    if (err) return console.error(err);
-    if (data.length === 0) return;
+  this.size = 0;
+};
 
-    for(let i = 0; i < data.length; i++) {
-      queue.push(data[i]);
-    }
-  });
-}, 100); //TODO: allow customizable interval
+cuejs.prototype.enq = function(item) {
+    this.storage = [
+      item,
+      ...this.storage,
+  ];
+  this.size++;
+};
 
-setTimeout(() => {
-  clearInterval(interval);
+cuejs.prototype.deq = function() {
+  if (this.size === 0) return;
+  let rtnValue = undefined;
+  if (this.size === 1) { 
+    rtnValue = this.storage[0];
 
-  console.log(queue);
-}, 500);
+    this.storage = [];
+    this.size = 0;
 
+    return rtnValue;
+  } 
+  --this.size;
+  return this.storage.pop();
+}
+
+cuejs.prototype.peek = function() {
+  return this.storage[this.storage.length - 1];
+}
+
+cuejs.prototype.size = function() {
+  return this.size;
+}
+
+module.exports = cuejs;
