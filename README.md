@@ -1,4 +1,4 @@
-# Cuejs
+# Cuejs [![npm](https://img.shields.io/npm/v/cuejs.svg?style=flat-square)](https://www.npmjs.com/package/cuejs)
 ## A Base representation of a Queue in Javascript.
 ### Node version was tested using v7.1.0 so be aware that older versions may not work yet.
 
