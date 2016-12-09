@@ -9,7 +9,7 @@
   4. Properly format file structure for publishing to npm
 
 ### How to run it you ask?
-```
+```Javascript
 const Queue = require('queuer');
 const queue = new Queue();
 
