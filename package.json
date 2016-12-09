@@ -1,6 +1,6 @@
 {
   "name": "cuejs",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A utility library that ingests data files from a specified directory",
   "main": "index.js",
   "author": "Zachary Stoltz",
