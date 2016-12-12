@@ -1,2 +1,11 @@
 .vscode
 process/
+__test__
+coverage/
+process/
+node_modules/
+.travis.yml
+codecov.yml
+.eslintignore
+.eslintrc
+.gitignore
