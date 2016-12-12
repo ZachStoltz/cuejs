@@ -14,9 +14,10 @@
 const Queue = require('queuer');
 const queue = new Queue();
 
-queue.push(1);
-queue.dequeue(); // returns value 1
+queue.enq(1);
+queue.deq(); // returns value 1
 queue.peek(); // returns next value to be dequeued
+queue.size();
 
 ``` 
 
